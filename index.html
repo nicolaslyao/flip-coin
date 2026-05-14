@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>抛硬币和摇骰子</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-photo bg-photo-1" aria-hidden="true"></div>
+    <div class="bg-photo bg-photo-2" aria-hidden="true"></div>
+    <div class="backdrop backdrop-1" aria-hidden="true"></div>
+    <div class="backdrop backdrop-2" aria-hidden="true"></div>
+
+    <main class="app" id="app">
+      <header class="card hero glass">
+        <div class="hero-top">
+          <div>
+            <p class="eyebrow">Simple Lab</p>
+            <h1>抛硬币 & 摇骰子</h1>
+          </div>
+
+          <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换明暗模式">
+            <span class="theme-toggle-track">
+              <span class="theme-toggle-thumb">
+                <span class="theme-icon sun" aria-hidden="true"></span>
+                <span class="theme-icon moon" aria-hidden="true"></span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </header>
+
+      <section class="card glass chooser" id="chooserView">
+        <div class="chooser-grid">
+          <button class="choice-card coin-choice" id="chooseCoin" type="button" aria-label="进入抛硬币">
+            <span class="choice-icon choice-coin" aria-hidden="true">
+              <span class="choice-coin-inner"></span>
+            </span>
+            <strong>抛硬币</strong>
+          </button>
+
+          <button class="choice-card dice-choice" id="chooseDice" type="button" aria-label="进入摇骰子">
+            <span class="choice-icon choice-dice" aria-hidden="true">
+              <span class="choice-dice-inner"></span>
+            </span>
+            <strong>摇骰子</strong>
+          </button>
+        </div>
+      </section>
+
+      <section class="card feature glass detail-view" id="coinView" hidden>
+        <div class="feature-head">
+          <h2>抛硬币</h2>
+          <button class="ghost-btn" id="backFromCoin" type="button">返回</button>
+        </div>
+
+        <div class="stage coin-stage">
+          <div class="coin-wrap">
+            <div class="coin-visual" id="coinVisual" aria-hidden="true">
+              <div class="coin-face coin-front">
+                <span class="coin-rim"></span>
+                <span class="coin-edge"></span>
+                <span class="coin-medallion"></span>
+                <span class="coin-portrait"></span>
+                <span class="coin-engraving top">MINTED</span>
+                <span class="coin-date">MCMLXXIV</span>
+                <span class="coin-engraving bottom">OBVERSE</span>
+              </div>
+              <div class="coin-face coin-back">
+                <span class="coin-rim"></span>
+                <span class="coin-edge"></span>
+                <span class="coin-medallion reverse"></span>
+                <span class="coin-eagle"></span>
+                <span class="coin-engraving top">MINTED</span>
+                <span class="coin-date">MCMLXXIV</span>
+                <span class="coin-engraving bottom">REVERSE</span>
+              </div>
+            </div>
+          </div>
+          <div class="result-label" id="coinResult">点击开始</div>
+        </div>
+
+        <button class="primary-btn" id="coinBtn" type="button">开始抛硬币</button>
+      </section>
+
+      <section class="card feature glass detail-view" id="diceView" hidden>
+        <div class="feature-head">
+          <h2>摇骰子</h2>
+          <button class="ghost-btn" id="backFromDice" type="button">返回</button>
+        </div>
+
+        <div class="stage dice-stage">
+          <div class="dice-wrap">
+            <div class="dice-shadow" id="diceShadow" aria-hidden="true"></div>
+            <div class="dice-display" id="diceDisplay" aria-hidden="true" data-value="1">
+              <span class="pip pip-1"></span>
+              <span class="pip pip-2"></span>
+              <span class="pip pip-3"></span>
+              <span class="pip pip-4"></span>
+              <span class="pip pip-5"></span>
+              <span class="pip pip-6"></span>
+              <span class="pip pip-7"></span>
+              <span class="pip pip-8"></span>
+              <span class="pip pip-9"></span>
+            </div>
+          </div>
+          <div class="result-label" id="diceResult">点击开始</div>
+        </div>
+
+        <button class="primary-btn" id="diceBtn" type="button">开始摇骰子</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
