@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#08111f" />
     <title>抛硬币和摇骰子</title>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/icon.svg" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -58,25 +61,18 @@
 
         <div class="stage coin-stage">
           <div class="coin-wrap">
+            <div class="coin-shadow" aria-hidden="true"></div>
             <div class="coin-visual" id="coinVisual" aria-hidden="true">
-              <div class="coin-face coin-front">
-                <span class="coin-rim"></span>
-                <span class="coin-edge"></span>
-                <span class="coin-medallion"></span>
-                <span class="coin-portrait"></span>
-                <span class="coin-engraving top">MINTED</span>
-                <span class="coin-date">MCMLXXIV</span>
-                <span class="coin-engraving bottom">OBVERSE</span>
-              </div>
-              <div class="coin-face coin-back">
-                <span class="coin-rim"></span>
-                <span class="coin-edge"></span>
-                <span class="coin-medallion reverse"></span>
-                <span class="coin-eagle"></span>
-                <span class="coin-engraving top">MINTED</span>
-                <span class="coin-date">MCMLXXIV</span>
-                <span class="coin-engraving bottom">REVERSE</span>
-              </div>
+              <img
+                class="coin-face-image coin-face-front"
+                src="https://www.worldcoindatabase.com/img/coins/united-states-half-dollar-kennedy-obverse.png"
+                alt="硬币正面"
+              />
+              <img
+                class="coin-face-image coin-face-back"
+                src="https://www.worldcoindatabase.com/img/coins/united-states-half-dollar-kennedy-reverse.png"
+                alt="硬币背面"
+              />
             </div>
           </div>
           <div class="result-label" id="coinResult">点击开始</div>
