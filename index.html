@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" href="/icon.svg" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="dark">
     <div class="bg-photo bg-photo-1" aria-hidden="true"></div>
     <div class="bg-photo bg-photo-2" aria-hidden="true"></div>
     <div class="backdrop backdrop-1" aria-hidden="true"></div>
@@ -65,12 +65,12 @@
             <div class="coin-visual" id="coinVisual" aria-hidden="true">
               <img
                 class="coin-face-image coin-face-front"
-                src="https://www.worldcoindatabase.com/img/coins/united-states-half-dollar-kennedy-obverse.png"
+                src="coin-front.svg"
                 alt="硬币正面"
               />
               <img
                 class="coin-face-image coin-face-back"
-                src="https://www.worldcoindatabase.com/img/coins/united-states-half-dollar-kennedy-reverse.png"
+                src="coin-back.svg"
                 alt="硬币背面"
               />
             </div>
@@ -90,22 +90,54 @@
         <div class="stage dice-stage">
           <div class="dice-wrap">
             <div class="dice-shadow" id="diceShadow" aria-hidden="true"></div>
-            <div class="dice-display" id="diceDisplay" aria-hidden="true" data-value="1">
-              <span class="pip pip-1"></span>
-              <span class="pip pip-2"></span>
-              <span class="pip pip-3"></span>
-              <span class="pip pip-4"></span>
-              <span class="pip pip-5"></span>
-              <span class="pip pip-6"></span>
-              <span class="pip pip-7"></span>
-              <span class="pip pip-8"></span>
-              <span class="pip pip-9"></span>
+            <div class="dice-cube" id="diceDisplay" aria-hidden="true" data-value="1">
+              <div class="dice-face dice-face-1"><span class="dot center"></span></div>
+              <div class="dice-face dice-face-2"><span class="dot top-left"></span><span class="dot bottom-right"></span></div>
+              <div class="dice-face dice-face-3"><span class="dot top-left"></span><span class="dot center"></span><span class="dot bottom-right"></span></div>
+              <div class="dice-face dice-face-4"><span class="dot top-left"></span><span class="dot top-right"></span><span class="dot bottom-left"></span><span class="dot bottom-right"></span></div>
+              <div class="dice-face dice-face-5"><span class="dot top-left"></span><span class="dot top-right"></span><span class="dot center"></span><span class="dot bottom-left"></span><span class="dot bottom-right"></span></div>
+              <div class="dice-face dice-face-6"><span class="dot top-left"></span><span class="dot top-right"></span><span class="dot mid-left"></span><span class="dot mid-right"></span><span class="dot bottom-left"></span><span class="dot bottom-right"></span></div>
             </div>
           </div>
           <div class="result-label" id="diceResult">点击开始</div>
         </div>
 
         <button class="primary-btn" id="diceBtn" type="button">开始摇骰子</button>
+      </section>
+
+      <section class="card feature glass stats-panel">
+        <div class="feature-head stats-head">
+          <h2>统计面板</h2>
+          <button class="ghost-btn" id="resetStatsBtn" type="button">重置全部统计</button>
+        </div>
+        <label class="keep-stats-toggle">
+          <input id="keepStatsToggle" type="checkbox" checked />
+          <span>保留统计数据</span>
+        </label>
+        <div class="stats-group">
+          <h3>硬币统计</h3>
+          <div class="stats-grid">
+            <div class="stat-box">
+              <span class="stat-label">正面</span>
+              <strong class="stat-value" id="headsCount">0</strong>
+            </div>
+            <div class="stat-box">
+              <span class="stat-label">反面</span>
+              <strong class="stat-value" id="tailsCount">0</strong>
+            </div>
+          </div>
+        </div>
+        <div class="stats-group">
+          <h3>骰子统计</h3>
+          <div class="dice-stats-grid">
+            <div class="stat-box"><span class="stat-label">1 点</span><strong class="stat-value" id="diceCount1">0</strong></div>
+            <div class="stat-box"><span class="stat-label">2 点</span><strong class="stat-value" id="diceCount2">0</strong></div>
+            <div class="stat-box"><span class="stat-label">3 点</span><strong class="stat-value" id="diceCount3">0</strong></div>
+            <div class="stat-box"><span class="stat-label">4 点</span><strong class="stat-value" id="diceCount4">0</strong></div>
+            <div class="stat-box"><span class="stat-label">5 点</span><strong class="stat-value" id="diceCount5">0</strong></div>
+            <div class="stat-box"><span class="stat-label">6 点</span><strong class="stat-value" id="diceCount6">0</strong></div>
+          </div>
+        </div>
       </section>
     </main>
 
